@@ -1,0 +1,17 @@
+.balanceSection {
+  text-align: center;
+}
+
+.balanceSection > * {
+  margin-inline: auto;
+}
+
+.heading {
+  max-width: 20ch;
+  margin-bottom: var(--space-sm);
+}
+
+.paragraph {
+  max-width: 52ch;
+  margin-bottom: var(--space-lg);
+}

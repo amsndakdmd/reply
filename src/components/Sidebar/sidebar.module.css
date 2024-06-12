@@ -1,0 +1,116 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  max-width: 60px;
+  height: 100vh;
+  padding: var(--space-lg);
+  background-image: var(--section-background);
+  z-index: 999;
+  backdrop-filter: var(--section-background-blur);
+}
+
+.sidebar.active {
+  max-width: 230px;
+  position: fixed;
+}
+
+.sidebar.active .sidebarHead {
+  flex-direction: row;
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.sidebar.active .sidebarLogo span,
+.sidebar.active .sidebarLink span,
+.sidebar.active .sidebarButton span {
+  display: unset;
+}
+
+.sidebar.active .sidebarNavigation {
+  align-items: unset;
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: var(--section-outline);
+}
+
+.sidebarHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.sidebarLogo span {
+  display: none;
+}
+
+.sidebarNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.sidebarButton {
+  justify-content: flex-start !important;
+  font-size: var(--paragraph) !important;
+}
+
+.sidebarButton span {
+  display: none;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--neutral-400);
+  padding: 4px;
+  border-radius: var(--border-radius-sm);
+}
+
+.sidebarLink svg {
+  flex-shrink: 0;
+}
+
+.sidebarLink:hover {
+  color: var(--white);
+  background-image: linear-gradient(#0000000d, #0000000d),
+    linear-gradient(#ffffff00, #ffffff33),
+    linear-gradient(var(--neutral-600), var(--neutral-600));
+  box-shadow: inset 0 0 0 1px var(--neutral-600);
+}
+
+.sidebarLink.active {
+  color: var(--white);
+  background-image: linear-gradient(#0000000d, #0000000d),
+    linear-gradient(#ffffff00, #ffffff33),
+    linear-gradient(var(--neutral-700), var(--neutral-700));
+  box-shadow: inset 0 0 0 1px var(--neutral-700);
+}
+
+.sidebarLink span {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar.active {
+    position: sticky;
+  }
+}

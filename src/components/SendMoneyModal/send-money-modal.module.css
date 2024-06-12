@@ -1,0 +1,46 @@
+.form {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.head {
+  border-bottom: 1px solid var(--white);
+  padding-bottom: var(--space-lg);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.label {
+  color: var(--neutral-100);
+}
+
+.input {
+  height: 40px;
+  text-transform: capitalize;
+}
+
+.input.big {
+  height: var(--big-input-height);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.buttons > * {
+  width: 100%;
+}

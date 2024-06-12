@@ -1,0 +1,13 @@
+.tableContainer {
+  height: calc(672px + var(--table-header-height));
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-100);
+  border-radius: var(--scrollbar-width);
+}

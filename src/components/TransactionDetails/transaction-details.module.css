@@ -1,0 +1,35 @@
+.head {
+  background-color: var(--brand-500);
+  padding: calc(var(--space-lg) * 2) var(--space-lg);
+  position: relative;
+  border-top-left-radius: var(--border-radius-md);
+  border-top-right-radius: var(--border-radius-md);
+}
+
+.head button {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  color: var(--white);
+}
+
+.body {
+  padding: var(--space-lg);
+}
+
+.senderGroup {
+  margin-bottom: calc(var(--space-lg) * 2);
+}
+
+.receiverGroup {
+  margin-bottom: var(--space-lg);
+}
+
+.sender,
+.receiver {
+  color: var(--neutral-100);
+}
+
+.messageBox {
+  height: var(--big-input-height);
+}

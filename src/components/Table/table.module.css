@@ -1,0 +1,80 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  padding-inline: var(--space-lg);
+}
+
+.tableHeader {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--neutral-400);
+  height: var(--table-header-height);
+}
+
+.tableHeader:last-child {
+  text-align: right;
+}
+
+.tableHeader:last-child .tableButton {
+  margin-left: auto;
+}
+
+.tableButton {
+  display: flex;
+  align-items: center;
+}
+
+.tableRow:hover {
+  background-color: var(--neutral-600);
+  cursor: pointer;
+}
+
+.tableCell {
+  padding: var(--space-lg);
+  height: var(--table-row-height);
+}
+
+.tableCell:last-child {
+  text-align: right;
+}
+
+.tableGroupCell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.tableGroupCell img {
+  max-width: 32px;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 768px) {
+  .tableHeader {
+    display: none;
+  }
+
+  .tableCell {
+    display: block;
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  .tableCell:first-child {
+    padding-top: var(--space-lg);
+  }
+  .tableCell:last-child {
+    padding-bottom: var(--space-lg);
+  }
+
+  .tableCell:last-child {
+    text-align: left;
+  }
+
+  .tableCell::before {
+    content: attr(data-cell);
+  }
+}
