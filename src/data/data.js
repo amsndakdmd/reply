@@ -122,11 +122,19 @@ export const tableHeaders = [
   },
 ]
 
+export const senderInformations = {
+  image: 'src/assets/images/james-williams.png',
+  name: 'James Williams',
+}
+
+export const balance = [56517, 55450, 51934, 49034]
+
 export const transactions = [
   {
-    id: 1,
-    image: 'src/assets/images/WilliamGarcia.png',
-    name: 'William Garcia',
+    receiverImage: 'src/assets/images/william-garcia.png',
+    receiverName: 'William Garcia',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-6-3').toLocaleDateString(undefined, {
       month: 'short',
@@ -136,9 +144,10 @@ export const transactions = [
     message: 'Thank you very much',
   },
   {
-    id: 2,
-    image: 'src/assets/images/OliverJones.png',
-    name: 'Oliver Jones',
+    receiverImage: 'src/assets/images/oliver-jones.png',
+    receiverName: 'Oliver Jones',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-6-2').toLocaleDateString(undefined, {
       month: 'short',
@@ -148,9 +157,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 3,
-    image: 'src/assets/images/Spotify.png',
-    name: 'Spotify',
+    receiverImage: 'src/assets/images/spotify.png',
+    receiverName: 'Spotify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-5-25').toLocaleDateString(undefined, {
       month: 'short',
@@ -160,9 +170,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 4,
-    image: 'src/assets/images/AdobePhotoshop.png',
-    name: 'Adobe Photoshop',
+    receiverImage: 'src/assets/images/adobe-photoshop.png',
+    receiverName: 'Adobe Photoshop',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-5-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -172,9 +183,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 5,
-    image: 'src/assets/images/Loom.png',
-    name: 'Loom',
+    receiverImage: 'src/assets/images/loom.png',
+    receiverName: 'Loom',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-5-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -184,9 +196,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 6,
-    image: 'src/assets/images/Dribbble.png',
-    name: 'Dribbble',
+    receiverImage: 'src/assets/images/dribbble.png',
+    receiverName: 'Dribbble',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-5-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -196,9 +209,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 7,
-    image: 'src/assets/images/Shopify.png',
-    name: 'Shopify',
+    receiverImage: 'src/assets/images/shopify.png',
+    receiverName: 'Shopify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-5-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -208,9 +222,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 8,
-    image: 'src/assets/images/Mailchimp.png',
-    name: 'Mailchimp',
+    receiverImage: 'src/assets/images/mailchimp.png',
+    receiverName: 'Mailchimp',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-5-21').toLocaleDateString(undefined, {
       month: 'short',
@@ -220,9 +235,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 9,
-    image: 'src/assets/images/JessicaGarcia.png',
-    name: 'Jessica Garcia',
+    receiverImage: 'src/assets/images/jessica-garcia.png',
+    receiverName: 'Jessica Garcia',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-5-20').toLocaleDateString(undefined, {
       month: 'short',
@@ -232,9 +248,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 10,
-    image: 'src/assets/images/LucasJones.png',
-    name: 'Lucas Jones',
+    receiverImage: 'src/assets/images/lucas-jones.png',
+    receiverName: 'Lucas Jones',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-5-20').toLocaleDateString(undefined, {
       month: 'short',
@@ -244,9 +261,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 11,
-    image: 'src/assets/images/MiaThomas.png',
-    name: 'Mia Thomas',
+    receiverImage: 'src/assets/images/mia-thomas.png',
+    receiverName: 'Mia Thomas',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Gift',
     date: new Date('2024-5-19').toLocaleDateString(undefined, {
       month: 'short',
@@ -256,9 +274,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 12,
-    image: 'src/assets/images/BenjaminMiller.png',
-    name: 'Benjamin Miller',
+    receiverImage: 'src/assets/images/benjamin-miller.png',
+    receiverName: 'Benjamin Miller',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Bills',
     date: new Date('2024-5-16').toLocaleDateString(undefined, {
       month: 'short',
@@ -268,9 +287,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 13,
-    image: 'src/assets/images/HenryJohnson.png',
-    name: 'Henry Johnson',
+    receiverImage: 'src/assets/images/henry-johnson.png',
+    receiverName: 'Henry Johnson',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-5-5').toLocaleDateString(undefined, {
       month: 'short',
@@ -280,9 +300,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 14,
-    image: 'src/assets/images/Spotify.png',
-    name: 'Spotify',
+    receiverImage: 'src/assets/images/spotify.png',
+    receiverName: 'Spotify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-4-25').toLocaleDateString(undefined, {
       month: 'short',
@@ -292,9 +313,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 15,
-    image: 'src/assets/images/NoahWilliams.png',
-    name: 'Noah Williams',
+    receiverImage: 'src/assets/images/noah-williams.png',
+    receiverName: 'Noah Williams',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Gift',
     date: new Date('2024-4-25').toLocaleDateString(undefined, {
       month: 'short',
@@ -304,9 +326,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 16,
-    image: 'src/assets/images/AdobePhotoshop.png',
-    name: 'Adobe Photoshop',
+    receiverImage: 'src/assets/images/adobe-photoshop.png',
+    receiverName: 'Adobe Photoshop',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-4-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -316,9 +339,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 17,
-    image: 'src/assets/images/Loom.png',
-    name: 'Loom',
+    receiverImage: 'src/assets/images/loom.png',
+    receiverName: 'Loom',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-6-2').toLocaleDateString(undefined, {
       month: 'short',
@@ -328,21 +352,23 @@ export const transactions = [
     message: '',
   },
   {
-    id: 18,
-    image: 'src/assets/images/Shopify.png',
-    name: 'Shopify',
+    receiverImage: 'src/assets/images/shopify.png',
+    receiverName: 'Shopify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-4-24').toLocaleDateString(undefined, {
       month: 'short',
       day: 'numeric',
     }),
-    amount: 12,
+    amount: 12.99,
     message: '',
   },
   {
-    id: 19,
-    image: 'src/assets/images/LucasJones.png',
-    name: 'Lucas Jones',
+    receiverImage: 'src/assets/images/lucas-jones.png',
+    receiverName: 'Lucas Jones',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-4-20').toLocaleDateString(undefined, {
       month: 'short',
@@ -352,9 +378,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 20,
-    image: 'src/assets/images/BenjaminMiller.png',
-    name: 'Benjamin Miller',
+    receiverImage: 'src/assets/images/benjamin-miller.png',
+    receiverName: 'Benjamin Miller',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Bills',
     date: new Date('2024-4-16').toLocaleDateString(undefined, {
       month: 'short',
@@ -364,9 +391,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 21,
-    image: 'src/assets/images/HenryJohnson.png',
-    name: 'Henry Johnson',
+    receiverImage: 'src/assets/images/henry-johnson.png',
+    receiverName: 'Henry Johnson',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-4-5').toLocaleDateString(undefined, {
       month: 'short',
@@ -376,9 +404,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 22,
-    image: 'src/assets/images/Spotify.png',
-    name: 'Spotify',
+    receiverImage: 'src/assets/images/spotify.png',
+    receiverName: 'Spotify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-3-25').toLocaleDateString(undefined, {
       month: 'short',
@@ -388,9 +417,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 23,
-    image: 'src/assets/images/AdobePhotoshop.png',
-    name: 'Adobe Photoshop',
+    receiverImage: 'src/assets/images/adobe-photoshop.png',
+    receiverName: 'Adobe Photoshop',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-3-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -400,9 +430,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 24,
-    image: 'src/assets/images/Loom.png',
-    name: 'Loom',
+    receiverImage: 'src/assets/images/loom.png',
+    receiverName: 'Loom',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-3-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -412,9 +443,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 25,
-    image: 'src/assets/images/Spotify.png',
-    name: 'Spotify',
+    receiverImage: 'src/assets/images/spotify.png',
+    receiverName: 'Spotify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-3-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -424,9 +456,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 26,
-    image: 'src/assets/images/Shopify.png',
-    name: 'Shopify',
+    receiverImage: 'src/assets/images/shopify.png',
+    receiverName: 'Shopify',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Subscription',
     date: new Date('2024-3-24').toLocaleDateString(undefined, {
       month: 'short',
@@ -436,9 +469,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 27,
-    image: 'src/assets/images/LucasJones.png',
-    name: 'Lucas Jones',
+    receiverImage: 'src/assets/images/lucas-jones.png',
+    receiverName: 'Lucas Jones',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Other',
     date: new Date('2024-3-20').toLocaleDateString(undefined, {
       month: 'short',
@@ -448,9 +482,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 28,
-    image: 'src/assets/images/BenjaminMiller.png',
-    name: 'Benjamin Miller',
+    receiverImage: 'src/assets/images/benjamin-miller.png',
+    receiverName: 'Benjamin Miller',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Bills',
     date: new Date('2024-3-16').toLocaleDateString(undefined, {
       month: 'short',
@@ -460,9 +495,10 @@ export const transactions = [
     message: '',
   },
   {
-    id: 29,
-    image: 'src/assets/images/HenryJohnson.png',
-    name: 'Henry Johnson',
+    receiverImage: 'src/assets/images/henry-johnson.png',
+    receiverName: 'Henry Johnson',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     purpose: 'Others',
     date: new Date('2024-3-5').toLocaleDateString(undefined, {
       month: 'short',

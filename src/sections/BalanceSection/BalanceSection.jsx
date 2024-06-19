@@ -1,17 +1,53 @@
+import Button from '../../components/Button/Button'
+import { useBalance } from '../../utils/contexts/BalanceContext'
 import Section from '../Section/Section'
-import { Link } from 'react-router-dom'
 import styles from './balance-section.module.css'
-import buttonStyles from '../../components/Button/button.module.css'
+import ArrowUpRightIcon from '../../icons/ArrowUpRightIcon'
+import Dialog from '../../components/Dialog/Dialog'
+import SendMoneyModal from '../../components/SendMoneyModal/SendMoneyModal'
+import { useRef } from 'react'
+import Chart from '../../components/Chart/Chart'
 
 export default function BalanceSection() {
+  const { getLastBalance, balance } = useBalance()
+  const dialogRef = useRef(null)
+
+  const data = {
+    labels: balance,
+    datasets: [
+      {
+        // label: 'Test',
+        data: balance,
+        // fill: 'start',
+        borderColor: getComputedStyle(
+          document.documentElement
+        ).getPropertyValue('--brand-500'),
+      },
+    ],
+  }
+
   return (
-    <Section className={styles.balanceSection}>
-      <h1 className={styles.heading}>A Clearer Financial Picture Coming Soon</h1>
-      <p className={styles.paragraph}>
-        We are actively working on improving this balance page to provide you
-        with a comprehensive overview of your financial situation.
-      </p>
-      <Link className={`${buttonStyles.base} ${buttonStyles.primary} ${buttonStyles.large}`} to="/recent-transactions">Recent Transacions</Link>
-    </Section>
+    <>
+      <Section>
+        <header className={styles.head}>
+          <div>
+            <p>Balance</p>
+            <h1>${getLastBalance().toFixed(2)}</h1>
+          </div>
+          <Button
+            variant="primary"
+            size="large"
+            onClick={() => dialogRef?.current?.showModal()}
+          >
+            <ArrowUpRightIcon />
+            Send Money
+          </Button>
+        </header>
+        <Chart data={data} />
+      </Section>
+      <Dialog ref={dialogRef}>
+        <SendMoneyModal closeModal={() => dialogRef?.current?.close()} />
+      </Dialog>
+    </>
   )
 }

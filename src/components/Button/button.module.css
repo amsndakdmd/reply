@@ -3,7 +3,7 @@
   align-items: end;
   justify-content: center;
   gap: var(--space-sm);
-  font-size: 14px;
+  font-size: var(--paragraph);
   border-radius: var(--border-radius-sm);
   background-image: linear-gradient(#ffffff00, #ffffff33);
 }
@@ -38,6 +38,15 @@
 .tertiary:hover {
   background-image: linear-gradient(#0000000d, #0000000d),
     linear-gradient(#ffffff00, #ffffff33);
+}
+
+.ghost {
+  background-image: unset;
+  color: var(--brand-500);
+}
+
+.ghost:hover {
+  color: var(--brand-600);
 }
 
 .large {

@@ -2,18 +2,28 @@ import { useState } from 'react'
 import Button from '../Button/Button'
 import styles from './send-money-modal.module.css'
 import { useTransactions } from '../../utils/contexts/TransactionsContext'
+import PersonIcon from '../../icons/PersonIcon'
+import MoneyIcon from '../../icons/MoneyIcon'
+import GiftIcon from '../../icons/GiftIcon'
+import { senderInformations } from '../../data/data'
+import { useBalance } from '../../utils/contexts/BalanceContext'
 
 export default function SendMoneyModal({ closeModal }) {
-  const { transactions, addNewTransaction } = useTransactions()
+  const { addNewTransaction } = useTransactions()
+  const { updateBalance, getLastBalance } = useBalance()
+  const [errorMessage, setErrorMessage] = useState('')
+
   const initialFormFieldsValues = {
-    id: transactions.length + 1,
-    name: '',
+    receiverImage: '',
+    receiverName: '',
+    senderImage: senderInformations.image,
+    senderName: senderInformations.name,
     date: new Date().toLocaleDateString(undefined, {
       month: 'short',
       day: 'numeric',
     }),
     purpose: '',
-    amount: undefined,
+    amount: '',
     message: '',
   }
 
@@ -22,11 +32,23 @@ export default function SendMoneyModal({ closeModal }) {
   return (
     <>
       <form
-        method="dialog"
         onSubmit={(e) => {
           e.preventDefault()
+
+          if (0 >= parseInt(formFields.amount)) {
+            setErrorMessage("You can't send $0")
+            return
+          }
+
+          if (getLastBalance() < parseInt(formFields.amount)) {
+            setErrorMessage("You don't have enough money for transfer")
+            return
+          }
+
+          updateBalance(parseInt(formFields.amount))
           addNewTransaction(formFields)
           setFormFields(initialFormFieldsValues)
+          closeModal()
         }}
         className={styles.form}
       >
@@ -34,52 +56,74 @@ export default function SendMoneyModal({ closeModal }) {
           <h3>Send Money</h3>
         </div>
         <div className={styles.body}>
-          <div className={styles.inputGroup}>
+          <div className={styles.bodyGroup}>
             <label className={styles.label} htmlFor="person">
               Send To
             </label>
-            <input
-              className={styles.input}
-              type="text"
-              id="person"
-              value={formFields.name}
-              placeholder="Liam Smith"
-              onChange={(e) => {
-                setFormFields({ ...formFields, name: e.target.value })
-              }}
-            />
+            <div className={styles.inputGroup}>
+              <input
+                className={styles.input}
+                type="text"
+                id="person"
+                value={formFields.receiverName}
+                placeholder="Liam Smith"
+                required={true}
+                onChange={(e) => {
+                  setFormFields({
+                    ...formFields,
+                    receiverName: e.target.value,
+                    receiverImage: `src/assets/images/${e.target.value
+                      .split(' ')
+                      .join('-')
+                      .toLowerCase()}.png`,
+                  })
+                }}
+              />
+              <PersonIcon />
+            </div>
           </div>
-          <div className={styles.inputGroup}>
+          <div className={styles.bodyGroup}>
             <label className={styles.label} htmlFor="amount">
               Amount
             </label>
-            <input
-              className={styles.input}
-              type="number"
-              id="amount"
-              value={formFields.amount}
-              placeholder="150"
-              onChange={(e) => {
-                setFormFields({ ...formFields, amount: e.target.value })
-              }}
-            />
+            <div className={styles.inputGroup}>
+              <input
+                className={styles.input}
+                type="number"
+                id="amount"
+                value={formFields.amount}
+                placeholder="150"
+                required={true}
+                onChange={(e) => {
+                  setFormFields({
+                    ...formFields,
+                    amount: parseInt(e.target.value),
+                  })
+                }}
+              />
+              <MoneyIcon />
+            </div>
           </div>
-          <div className={styles.inputGroup}>
+          <div className={styles.bodyGroup}>
             <label className={styles.label} htmlFor="purpose">
               Purpose
             </label>
-            <input
-              className={styles.input}
-              type="text"
-              id="purpose"
-              value={formFields.purpose}
-              placeholder="IYKYK"
-              onChange={(e) => {
-                setFormFields({ ...formFields, purpose: e.target.value })
-              }}
-            />
+            <div className={styles.inputGroup}>
+              <input
+                className={styles.input}
+                type="text"
+                id="purpose"
+                value={formFields.purpose}
+                placeholder="IYKYK"
+                required={true}
+                onChange={(e) => {
+                  setFormFields({ ...formFields, purpose: e.target.value })
+                }}
+              />
+              <GiftIcon />
+            </div>
           </div>
-          <div className={styles.inputGroup}>
+          <div className={styles.bodyGroup}>
             <label className={styles.label} htmlFor="message">
               Message
             </label>
@@ -93,10 +137,19 @@ export default function SendMoneyModal({ closeModal }) {
                 setFormFields({ ...formFields, message: e.target.value })
               }}
             ></textarea>
+            <p className={styles.errorMessage}>{errorMessage}</p>
           </div>
         </div>
         <div className={styles.buttons}>
-          <Button variant="primary" size="large" onClick={closeModal}>
+          <Button
+            type="button"
+            variant="secondary"
+            size="large"
+            onClick={closeModal}
+          >
+            Cancel
+          </Button>
+          <Button variant="primary" size="large">
             Send Money
           </Button>
         </div>

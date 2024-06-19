@@ -16,23 +16,48 @@
   gap: var(--space-lg);
 }
 
-.inputGroup {
+.bodyGroup {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+}
+
+.people {
+  background-color: red;
+}
+
+.option {
+  background-color: orange;
 }
 
 .label {
   color: var(--neutral-100);
 }
 
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup svg {
+  position: absolute;
+  top: var(--space-lg);
+  left: var(--space-lg);
+  color: var(--white);
+}
+
 .input {
   height: 40px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
+  padding-left: calc(var(--space-xlg) + var(--space-lg) + var(--space-md));
 }
 
 .input.big {
   height: var(--big-input-height);
+  padding-left: var(--space-lg);
+}
+
+.errorMessage {
+  color: var(--danger-500);
 }
 
 .buttons {

@@ -36,6 +36,7 @@
 .tableCell {
   padding: var(--space-lg);
   height: var(--table-row-height);
+  text-transform: capitalize;
 }
 
 .tableCell:last-child {

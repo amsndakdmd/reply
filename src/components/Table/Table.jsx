@@ -5,8 +5,8 @@ import TransactionDetails from '../TransactionDetails/TransactionDetails'
 import { useTransactions } from '../../utils/contexts/TransactionsContext'
 import { useRef } from 'react'
 
-export default function Table() {
-  const { transactions, passTransactionDetail } = useTransactions()
+export default function Table({ transactions }) {
+  const { passTransactionDetail } = useTransactions()
   const dialogRef = useRef(null)
 
   return (
@@ -24,20 +24,35 @@ export default function Table() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => {
+          {transactions.map((transaction, index) => {
             return (
               <tr
-                key={transaction.id}
+                key={index}
                 className={styles.tableRow}
                 onClick={() => {
                   passTransactionDetail(transaction)
                   dialogRef.current?.showModal()
                 }}
               >
-                <td className={styles.tableCell}>{transaction.name}</td>
+                <td className={styles.tableCell}>
+                  <div className={styles.tableGroupCell}>
+                    <img
+                      src={transaction.receiverImage}
+                      alt={`Image of ${transaction.receiverName}`}
+                      onError={({ currentTarget }) => {
+                        currentTarget.onerror = null
+                        currentTarget.src =
+                          'src/assets/images/DefaultProfilePicture.png'
+                      }}
+                    />
+                    {transaction.receiverName}
+                  </div>
+                </td>
                 <td className={styles.tableCell}>{transaction.purpose}</td>
                 <td className={styles.tableCell}>{transaction.date}</td>
-                <td className={styles.tableCell}>${transaction.amount}</td>
+                <td className={styles.tableCell}>
+                  ${transaction.amount.toFixed(2)}
+                </td>
               </tr>
             )
           })}

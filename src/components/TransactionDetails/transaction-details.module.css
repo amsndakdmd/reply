@@ -17,17 +17,21 @@
   padding: var(--space-lg);
 }
 
-.senderGroup {
-  margin-bottom: calc(var(--space-lg) * 2);
-}
-
-.receiverGroup {
+.transactionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space-lg) * 4);
   margin-bottom: var(--space-lg);
 }
 
-.sender,
-.receiver {
+.informationGroup {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.sender {
   color: var(--neutral-100);
+  margin-bottom: var(--space-sm);
 }
 
 .messageBox {

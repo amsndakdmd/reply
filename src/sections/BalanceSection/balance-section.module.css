@@ -1,17 +1,15 @@
-.balanceSection {
-  text-align: center;
-}
-
-.balanceSection > * {
-  margin-inline: auto;
-}
-
-.heading {
-  max-width: 20ch;
-  margin-bottom: var(--space-sm);
-}
-
-.paragraph {
-  max-width: 52ch;
+.head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
   margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .head {
+    align-items: flex-end;
+    flex-direction: row;
+  }
 }
