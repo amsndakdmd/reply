@@ -47,7 +47,6 @@
 
 .input {
   height: 40px;
-  /* text-transform: capitalize; */
   padding-left: calc(var(--space-xlg) + var(--space-lg) + var(--space-md));
 }
 

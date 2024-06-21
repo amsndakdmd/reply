@@ -4,6 +4,7 @@ import Dialog from '../Dialog/Dialog'
 import TransactionDetails from '../TransactionDetails/TransactionDetails'
 import { useTransactions } from '../../utils/contexts/TransactionsContext'
 import { useRef } from 'react'
+import currencyFormatter from '../../utils/helpers/currencyFormatter'
 
 export default function Table({ transactions }) {
   const { passTransactionDetail } = useTransactions()
@@ -51,7 +52,7 @@ export default function Table({ transactions }) {
                 <td className={styles.tableCell}>{transaction.purpose}</td>
                 <td className={styles.tableCell}>{transaction.date}</td>
                 <td className={styles.tableCell}>
-                  ${transaction.amount.toFixed(2)}
+                  {currencyFormatter(transaction.amount)}
                 </td>
               </tr>
             )

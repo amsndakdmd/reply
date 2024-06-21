@@ -10,7 +10,7 @@ export default function App() {
     <TransactionsContextProvider>
       <BalanceContextProvider>
         <BrowserRouter>
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <div className='layout'>
             <Sidebar />
             <Routes>
               <Route path="/" element={<MyWalletPage />} />

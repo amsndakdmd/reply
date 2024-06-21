@@ -1,20 +1,23 @@
 @font-face {
   font-family: 'Switzer';
-  src: url('./assets/fonts/Switzer-Regular.woff2') format('woff2'),
-    url('./assets/fonts/Switzer-Regular.woff') format('woff'),
-    url('./assets/fonts/Switzer-Regular.ttf') format('truetype'),
-    url('./assets/fonts/Switzer-Regular.eot');
+  src: url('//cdn.fontshare.com/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/BLNB4FAQFNK56DWWNF7PMGTCOTZHOEII/ST3WKSSDMBK2MIQQO3MAVYWLF4FTOLFV/6IN5WOLRCYP4G4MOCOHOMXNON6Q7MDAR.ttf')
+      format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'Switzer';
-  src: url('./assets/fonts/Switzer-Medium.woff2') format('woff2'),
-    url('./assets/fonts/Switzer-Medium.woff') format('woff'),
-    url('./assets/fonts/Switzer-Medium.ttf') format('truetype'),
-    url('./assets/fonts/Switzer-Medium.eot');
+  src: url('//cdn.fontshare.com/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.woff2')
+      format('woff2'),
+    url('//cdn.fontshare.com/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.woff')
+      format('woff'),
+    url('//cdn.fontshare.com/wf/OYB4CXKJQXKTNSLJMTDQOIVUL2V5EL7S/WYO2P7DQVV5RNXGMCUO2HL4RJP4VFUAS/6XPIMU23OJVRY676OG5YVJMWEHWICATX.ttf')
+      format('truetype');
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -23,15 +26,15 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-  --brand-100: #cefad5;
-  --brand-200: #99f9a9;
-  --brand-300: #67f37e;
-  --brand-400: #3be356;
-  --brand-500: #1dc538;
-  --brand-600: #0fa627;
-  --brand-700: #06811a;
-  --brand-800: #025b10;
-  --brand-900: #03440d;
+  --brand-100: #ccfad4;
+  --brand-200: #9af9aa;
+  --brand-300: #68f37f;
+  --brand-400: #3be357;
+  --brand-500: #1dc339;
+  --brand-600: #0fa328;
+  --brand-700: #067f1a;
+  --brand-800: #025a0f;
+  --brand-900: #03450d;
   --neutral-100: #cecfd1;
   --neutral-200: #b6b8ba;
   --neutral-300: #9da0a3;
@@ -73,6 +76,8 @@
   --section-background: linear-gradient(#0d141f1a, #14213333),
     radial-gradient(at top, #0e1825cc, #090e1629 50%);
   --modal-background: radial-gradient(at top, #161f2be6, #0c1118e6 50%);
+  --chart-gradient-start-color: #1dc33966;
+  --chart-gradient-end-color: #0e172100;
   --section-background-blur: blur(16px);
   --scrollbar-width: 0.4vw;
   --modal-width: 340px;
@@ -95,6 +100,7 @@
   --heading3: 18px;
   --heading4: 16px;
   --paragraph: 16px;
+  --paragraph-sm: 14px;
   --link: 16px;
   --line-height: 1.4;
   --line-height-heading1: 1.2;
@@ -139,6 +145,7 @@ select {
 }
 
 input,
+select,
 textarea {
   outline: none;
   border: none;
@@ -150,6 +157,15 @@ textarea {
   color: var(--white);
   border: 1px solid var(--neutral-300);
   width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--brand-500);
+}
+
+select {
+  padding: unset;
 }
 
 button {
@@ -229,6 +245,11 @@ a {
 
 #root {
   isolation: isolate;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
 }
 
 main {

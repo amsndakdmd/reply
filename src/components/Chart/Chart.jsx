@@ -5,9 +5,8 @@ import {
   LinearScale,
   PointElement,
   LineElement,
-  Title,
   Tooltip,
-  Legend,
+  Filler,
 } from 'chart.js'
 
 ChartJS.register(
@@ -15,15 +14,10 @@ ChartJS.register(
   LinearScale,
   PointElement,
   LineElement,
-  // Title,
   Tooltip,
-  // Legend
+  Filler
 )
 
-export default function Chart({ data }) {
-  const options = {
-    // responsive: true,
-  }
-
+export default function Chart({ options, data }) {
   return <Line options={options} data={data} />
 }

@@ -15,15 +15,18 @@ export default function BalanceContextProvider({ children }) {
     localStorage.setItem('balance', JSON.stringify(balance))
   }, [balance])
 
-  function updateBalance(newBalance) {
+  function updateBalance({ balance, date }) {
     setBalance((currentBalance) => [
       ...currentBalance,
-      currentBalance[currentBalance.length - 1] - newBalance,
+      {
+        date,
+        balance: currentBalance[currentBalance.length - 1].balance - balance,
+      },
     ])
   }
 
   function getLastBalance() {
-    return balance[balance.length - 1]
+    return balance[balance.length - 1].balance
   }
 
   return (

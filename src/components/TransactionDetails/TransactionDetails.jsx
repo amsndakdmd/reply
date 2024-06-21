@@ -3,6 +3,7 @@ import XIcon from '../../icons/XIcon'
 import CalendarIcon from '../../icons/CalendarIcon'
 import styles from './transaction-details.module.css'
 import Button from '../Button/Button'
+import currencyFormatter from '../../utils/helpers/currencyFormatter'
 
 export default function TransactionDetails({ closeDialog }) {
   const { transactionDetail } = useTransactions()
@@ -12,7 +13,7 @@ export default function TransactionDetails({ closeDialog }) {
   return (
     <>
       <div className={styles.head}>
-        <h1>${transactionDetail.amount}</h1>
+        <h1>{currencyFormatter(transactionDetail.amount)}</h1>
         <button onClick={closeDialog}>
           <XIcon />
         </button>
@@ -23,7 +24,6 @@ export default function TransactionDetails({ closeDialog }) {
             <div className={styles.imageGroup}>
               <img
                 src={transactionDetail.senderImage}
-                // src={transactionDetail.image}
                 alt={`Image of ${transactionDetail.senderImage}`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null
@@ -48,7 +48,6 @@ export default function TransactionDetails({ closeDialog }) {
           <div className={styles.informationGroup}>
             <div className={styles.imageGroup}>
               <img
-                // src={transactionDetail.senderImage}
                 src={transactionDetail.receiverImage}
                 alt={''}
                 onError={({ currentTarget }) => {

@@ -1,3 +1,8 @@
+import {
+  longDateFormatter,
+  shortDateFormatter,
+} from '../utils/helpers/dateFormatters'
+
 export const people = [
   {
     id: 1,
@@ -127,7 +132,24 @@ export const senderInformations = {
   name: 'James Williams',
 }
 
-export const balance = [56517, 55450, 51934, 49034]
+export const balance = [
+  {
+    balance: 56517,
+    date: longDateFormatter(new Date('March 5, 2024 17:42:37')),
+  },
+  {
+    balance: 55450,
+    date: longDateFormatter(new Date('April 5, 2024 17:42:37')),
+  },
+  {
+    balance: 51934,
+    date: longDateFormatter(new Date('May 5, 2024 17:42:37')),
+  },
+  {
+    balance: 49034,
+    date: longDateFormatter(new Date('Jun 5, 2024 17:42:37')),
+  },
+]
 
 export const transactions = [
   {
@@ -136,12 +158,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-6-3').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-6-3')),
     amount: 1700,
-    message: 'Thank you very much',
+    message: 'Hi William!\n\nThank you for being an amazing friend.',
   },
   {
     receiverImage: 'src/assets/images/oliver-jones.png',
@@ -149,12 +168,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-6-2').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-6-2')),
     amount: 1200,
-    message: '',
+    message: 'Hi Oliver!\n\nCongrats on winning the bet.',
   },
   {
     receiverImage: 'src/assets/images/spotify.png',
@@ -162,10 +178,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-5-25').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-25')),
     amount: 10,
     message: '',
   },
@@ -175,10 +188,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-5-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-24')),
     amount: 22,
     message: '',
   },
@@ -188,10 +198,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-5-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-24')),
     amount: 12,
     message: '',
   },
@@ -201,10 +208,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-5-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-24')),
     amount: 8,
     message: '',
   },
@@ -214,10 +218,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-5-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-24')),
     amount: 24,
     message: '',
   },
@@ -227,10 +228,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-5-21').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-21')),
     amount: 10,
     message: '',
   },
@@ -240,12 +238,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-5-20').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-20')),
     amount: 825,
-    message: '',
+    message: 'Hi Jessica!\n\nIYKYK.',
   },
   {
     receiverImage: 'src/assets/images/lucas-jones.png',
@@ -253,12 +248,10 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-5-20').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-20')),
     amount: 1499,
-    message: '',
+    message:
+      'Hi Lucas!\n\nHere is a little help during this tough time. Stay strong!',
   },
   {
     receiverImage: 'src/assets/images/mia-thomas.png',
@@ -266,12 +259,10 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Gift',
-    date: new Date('2024-5-19').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-19')),
     amount: 200,
-    message: '',
+    message:
+      'Hi Mia!\n\nJust want to say thank you for being an incredible friend.',
   },
   {
     receiverImage: 'src/assets/images/benjamin-miller.png',
@@ -279,12 +270,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Bills',
-    date: new Date('2024-5-16').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-16')),
     amount: 246,
-    message: '',
+    message: 'Hi Benjamin.\n\nAs always...',
   },
   {
     receiverImage: 'src/assets/images/henry-johnson.png',
@@ -292,12 +280,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-5-5').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-5-5')),
     amount: 660,
-    message: '',
+    message: 'Hi Henry! \n\nMaking your house a home. Here is help for repairs.',
   },
   {
     receiverImage: 'src/assets/images/spotify.png',
@@ -305,10 +290,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-4-25').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-25')),
     amount: 10,
     message: '',
   },
@@ -318,12 +300,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Gift',
-    date: new Date('2024-4-25').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-25')),
     amount: 500,
-    message: '',
+    message: 'Hi Noah!\n\nThank you for always being there for me',
   },
   {
     receiverImage: 'src/assets/images/adobe-photoshop.png',
@@ -331,10 +310,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-4-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-24')),
     amount: 22,
     message: '',
   },
@@ -344,10 +320,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-6-2').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-6-2')),
     amount: 12,
     message: '',
   },
@@ -357,10 +330,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-4-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-24')),
     amount: 12.99,
     message: '',
   },
@@ -370,12 +340,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-4-20').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-20')),
     amount: 1499,
-    message: '',
+    message: 'Hi Lucas!\n\nCongrats on winning the bet again.',
   },
   {
     receiverImage: 'src/assets/images/benjamin-miller.png',
@@ -383,12 +350,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Bills',
-    date: new Date('2024-4-16').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-16')),
     amount: 246,
-    message: '',
+    message: 'Hi Benjamin.\n\nAs always...',
   },
   {
     receiverImage: 'src/assets/images/henry-johnson.png',
@@ -396,12 +360,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-4-5').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-4-5')),
     amount: 660,
-    message: '',
+    message: 'Hi Henry!\n\n\Smooth move! Here is a little help for your new start.',
   },
   {
     receiverImage: 'src/assets/images/spotify.png',
@@ -409,10 +370,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-3-25').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-25')),
     amount: 10,
     message: '',
   },
@@ -422,10 +380,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-3-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-24')),
     amount: 22,
     message: '',
   },
@@ -435,10 +390,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-3-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-24')),
     amount: 12,
     message: '',
   },
@@ -448,10 +400,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-3-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-24')),
     amount: 10,
     message: '',
   },
@@ -461,10 +410,7 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Subscription',
-    date: new Date('2024-3-24').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-24')),
     amount: 24,
     message: '',
   },
@@ -473,13 +419,10 @@ export const transactions = [
     receiverName: 'Lucas Jones',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
-    purpose: 'Other',
-    date: new Date('2024-3-20').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    purpose: 'Others',
+    date: shortDateFormatter(new Date('2024-3-20')),
     amount: 1499,
-    message: '',
+    message: 'Hi Lucas!\n\nCongrats on winning the bet.',
   },
   {
     receiverImage: 'src/assets/images/benjamin-miller.png',
@@ -487,12 +430,9 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Bills',
-    date: new Date('2024-3-16').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-16')),
     amount: 246,
-    message: '',
+    message: 'Hi Benjamin.\n\nAs always...',
   },
   {
     receiverImage: 'src/assets/images/henry-johnson.png',
@@ -500,11 +440,8 @@ export const transactions = [
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
     purpose: 'Others',
-    date: new Date('2024-3-5').toLocaleDateString(undefined, {
-      month: 'short',
-      day: 'numeric',
-    }),
+    date: shortDateFormatter(new Date('2024-3-5')),
     amount: 660,
-    message: '',
+    message: 'Hi Henry!\n\nSafe travels! Here is a little help for your journey.',
   },
 ]
