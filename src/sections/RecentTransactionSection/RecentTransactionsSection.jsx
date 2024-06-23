@@ -1,7 +1,6 @@
 import styles from './recent-transactions-section.module.css'
 import Table from '../../components/Table/Table'
 import Section from '../Section/Section'
-import { useTransactions } from '../../utils/contexts/TransactionsContext'
 
 export default function RecentTransactionsSection({ transactions, link }) {
   return (

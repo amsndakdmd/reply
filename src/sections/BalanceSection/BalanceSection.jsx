@@ -1,7 +1,7 @@
+import styles from './balance-section.module.css'
 import Button from '../../components/Button/Button'
 import { useBalance } from '../../utils/contexts/BalanceContext'
 import Section from '../Section/Section'
-import styles from './balance-section.module.css'
 import ArrowUpRightIcon from '../../icons/ArrowUpRightIcon'
 import Dialog from '../../components/Dialog/Dialog'
 import SendMoneyModal from '../../components/SendMoneyModal/SendMoneyModal'
@@ -65,7 +65,6 @@ export default function BalanceSection() {
     },
     scales: {
       y: {
-        // max: 50000,
         min: 0,
         grid: {
           color: getComputedStyle(document.documentElement).getPropertyValue(
@@ -129,7 +128,6 @@ export default function BalanceSection() {
           size: getComputedStyle(document.documentElement).getPropertyValue(
             '--heading4'
           ),
-
           weight: 500,
         },
         bodyFont: {

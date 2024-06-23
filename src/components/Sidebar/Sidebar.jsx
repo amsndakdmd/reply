@@ -1,25 +1,15 @@
+import styles from './sidebar.module.css'
+import Logo from '../../icons/Logo'
 import OpenedSidebarIcon from '../../icons/OpenedSidebarIcon'
 import ClosedSidebarIcon from '../../icons/ClosedSidebarIcon'
-import WalletIcon from '../../icons/WalletIcon'
-import TransactionsIcon from '../../icons/TransactionsIcon'
-import Logo from '../../icons/Logo'
+import { navigation } from '../../data/data'
 import { Link, NavLink } from 'react-router-dom'
-import styles from './sidebar.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Button from '../Button/Button'
 import ArrowUpRightIcon from '../../icons/ArrowUpRightIcon'
 import Dialog from '../Dialog/Dialog'
 import SendMoneyModal from '../SendMoneyModal/SendMoneyModal'
-
-const navigation = [
-  { name: 'My Wallet', href: '/', icon: WalletIcon },
-  {
-    name: 'Recent Transactions',
-    href: '/recent-transactions',
-    icon: TransactionsIcon,
-  },
-]
 
 export default function Sidebar() {
   const isBigScreen = useMediaQuery({ minWidth: 768 })

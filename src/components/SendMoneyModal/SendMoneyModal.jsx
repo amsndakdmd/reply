@@ -1,11 +1,11 @@
+import styles from './send-money-modal.module.css'
 import { useState } from 'react'
 import Button from '../Button/Button'
-import styles from './send-money-modal.module.css'
 import { useTransactions } from '../../utils/contexts/TransactionsContext'
 import PersonIcon from '../../icons/PersonIcon'
 import MoneyIcon from '../../icons/MoneyIcon'
 import GiftIcon from '../../icons/GiftIcon'
-import { purposes, senderInformations } from '../../data/data'
+import { senderInformations } from '../../data/data'
 import { useBalance } from '../../utils/contexts/BalanceContext'
 import {
   shortDateFormatter,

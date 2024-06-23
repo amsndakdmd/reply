@@ -1,5 +1,5 @@
-import { cva } from 'class-variance-authority'
 import styles from './button.module.css'
+import { cva } from 'class-variance-authority'
 
 const button = cva(styles.base, {
   variants: {

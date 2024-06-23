@@ -1,3 +1,6 @@
+import TransactionsIcon from '../icons/TransactionsIcon'
+import WalletIcon from '../icons/WalletIcon'
+
 import {
   longDateFormatter,
   shortDateFormatter,
@@ -127,8 +130,17 @@ export const tableHeaders = [
   },
 ]
 
+export const navigation = [
+  { name: 'My Wallet', href: '/', icon: WalletIcon },
+  {
+    name: 'Recent Transactions',
+    href: '/recent-transactions',
+    icon: TransactionsIcon,
+  },
+]
+
 export const senderInformations = {
-  image: 'src/assets/images/james-williams.png',
+  image: './src/assets/images/james-williams.png',
   name: 'James Williams',
 }
 
@@ -153,7 +165,7 @@ export const balance = [
 
 export const transactions = [
   {
-    receiverImage: 'src/assets/images/william-garcia.png',
+    receiverImage: './src/assets/images/william-garcia.png',
     receiverName: 'William Garcia',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -282,7 +294,8 @@ export const transactions = [
     purpose: 'Others',
     date: shortDateFormatter(new Date('2024-5-5')),
     amount: 660,
-    message: 'Hi Henry! \n\nMaking your house a home. Here is help for repairs.',
+    message:
+      'Hi Henry! \n\nMaking your house a home. Here is help for repairs.',
   },
   {
     receiverImage: 'src/assets/images/spotify.png',
@@ -362,7 +375,8 @@ export const transactions = [
     purpose: 'Others',
     date: shortDateFormatter(new Date('2024-4-5')),
     amount: 660,
-    message: 'Hi Henry!\n\n\Smooth move! Here is a little help for your new start.',
+    message:
+      'Hi Henry!\n\nSmooth move! Here is a little help for your new start.',
   },
   {
     receiverImage: 'src/assets/images/spotify.png',
@@ -442,6 +456,7 @@ export const transactions = [
     purpose: 'Others',
     date: shortDateFormatter(new Date('2024-3-5')),
     amount: 660,
-    message: 'Hi Henry!\n\nSafe travels! Here is a little help for your journey.',
+    message:
+      'Hi Henry!\n\nSafe travels! Here is a little help for your journey.',
   },
 ]

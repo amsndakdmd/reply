@@ -1,7 +1,7 @@
+import styles from './transaction-details.module.css'
 import { useTransactions } from '../../utils/contexts/TransactionsContext'
 import XIcon from '../../icons/XIcon'
 import CalendarIcon from '../../icons/CalendarIcon'
-import styles from './transaction-details.module.css'
 import Button from '../Button/Button'
 import currencyFormatter from '../../utils/helpers/currencyFormatter'
 
@@ -28,7 +28,7 @@ export default function TransactionDetails({ closeDialog }) {
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null
                   currentTarget.src =
-                    'src/assets/images/DefaultProfilePicture.png'
+                    'src/assets/images/defaultProfilePicture.png'
                 }}
               />
             </div>
