@@ -35,18 +35,18 @@ export default function SendMoneyModal({ closeModal }) {
       onSubmit={(e) => {
         e.preventDefault()
 
-        if (0 >= parseInt(formFields.amount)) {
+        if (0 >= parseFloat(formFields.amount)) {
           setErrorMessage("You can't send $0 or less")
           return
         }
 
-        if (getLastBalance() < parseInt(formFields.amount)) {
+        if (getLastBalance() < parseFloat(formFields.amount)) {
           setErrorMessage("You don't have enough money for transfer")
           return
         }
 
         updateBalance({
-          balance: parseInt(formFields.amount),
+          balance: parseFloat(formFields.amount),
           date: longDateFormatter(new Date()),
         })
         addNewTransaction(formFields)
@@ -100,7 +100,7 @@ export default function SendMoneyModal({ closeModal }) {
               onChange={(e) => {
                 setFormFields({
                   ...formFields,
-                  amount: parseInt(e.target.value),
+                  amount: parseFloat(e.target.value),
                 })
               }}
             />

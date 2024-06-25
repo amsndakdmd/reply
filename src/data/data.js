@@ -146,19 +146,19 @@ export const senderInformations = {
 
 export const balance = [
   {
-    balance: 56517,
+    balance: 56527.89,
     date: longDateFormatter(new Date('March 5, 2024 17:42:37')),
   },
   {
-    balance: 55450,
+    balance: 55460.89,
     date: longDateFormatter(new Date('April 5, 2024 17:42:37')),
   },
   {
-    balance: 51934,
+    balance: 51944.89,
     date: longDateFormatter(new Date('May 5, 2024 17:42:37')),
   },
   {
-    balance: 49034,
+    balance: 49044.89,
     date: longDateFormatter(new Date('Jun 5, 2024 17:42:37')),
   },
 ]
@@ -191,7 +191,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-5-25')),
-    amount: 10,
+    amount: 10.99,
     message: '',
   },
   {
@@ -201,7 +201,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-5-24')),
-    amount: 22,
+    amount: 22.99,
     message: '',
   },
   {
@@ -211,7 +211,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-5-24')),
-    amount: 12,
+    amount: 12.99,
     message: '',
   },
   {
@@ -304,7 +304,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-4-25')),
-    amount: 10,
+    amount: 10.99,
     message: '',
   },
   {
@@ -324,7 +324,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-4-24')),
-    amount: 22,
+    amount: 22.99,
     message: '',
   },
   {
@@ -334,7 +334,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-6-2')),
-    amount: 12,
+    amount: 12.99,
     message: '',
   },
   {
@@ -385,7 +385,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-3-25')),
-    amount: 10,
+    amount: 10.99,
     message: '',
   },
   {
@@ -395,7 +395,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-3-24')),
-    amount: 22,
+    amount: 22.99,
     message: '',
   },
   {
@@ -405,7 +405,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-3-24')),
-    amount: 12,
+    amount: 12.99,
     message: '',
   },
   {
@@ -415,7 +415,7 @@ export const transactions = [
     senderName: senderInformations.name,
     purpose: 'Subscription',
     date: shortDateFormatter(new Date('2024-3-24')),
-    amount: 10,
+    amount: 10.99,
     message: '',
   },
   {
