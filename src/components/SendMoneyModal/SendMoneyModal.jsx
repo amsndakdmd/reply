@@ -61,7 +61,7 @@ export default function SendMoneyModal({ closeModal }) {
       <div className={styles.body}>
         <div className={styles.bodyGroup}>
           <label className={styles.label} htmlFor="person">
-            Send To
+            Send To*
           </label>
           <div className={styles.inputGroup}>
             <input
@@ -87,7 +87,7 @@ export default function SendMoneyModal({ closeModal }) {
         </div>
         <div className={styles.bodyGroup}>
           <label className={styles.label} htmlFor="amount">
-            Amount
+            Amount*
           </label>
           <div className={styles.inputGroup}>
             <input
@@ -109,7 +109,7 @@ export default function SendMoneyModal({ closeModal }) {
         </div>
         <div className={styles.bodyGroup}>
           <label className={styles.label} htmlFor="purposes">
-            Purpose
+            Purpose*
           </label>
           <div className={styles.inputGroup}>
             <input
