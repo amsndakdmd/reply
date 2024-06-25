@@ -10,102 +10,102 @@ export const people = [
   {
     id: 1,
     name: 'Liam Smith',
-    profilePicture: 'src/assets/images/LiamSmith.png',
+    profilePicture: '/images/liam-smith.png',
   },
   {
     id: 2,
     name: 'Henry Jonson',
-    profilePicture: 'src/assets/images/HenryJohnson.png',
+    profilePicture: '/images/henry-jonson.png',
   },
   {
     id: 3,
     name: 'Noah Williams',
-    profilePicture: 'src/assets/images/NoahWilliams.png',
+    profilePicture: '/images/noah-williams.png',
   },
   {
     id: 4,
     name: 'Lucas Brown',
-    profilePicture: 'src/assets/images/LucasBrown.png',
+    profilePicture: '/images/lucas-brown.png',
   },
   {
     id: 5,
     name: 'Oliver Jones',
-    profilePicture: 'src/assets/images/OliverJones.png',
+    profilePicture: '/images/oliver-jones.png',
   },
   {
     id: 6,
     name: 'William Garcia',
-    profilePicture: 'src/assets/images/WilliamGarcia.png',
+    profilePicture: '/images/william-garcia.png',
   },
   {
     id: 7,
     name: 'Benjamin Miller',
-    profilePicture: 'src/assets/images/BenjaminMiller.png',
+    profilePicture: '/images/benjamin-miller.png',
   },
   {
     id: 8,
     name: 'Jack Davis',
-    profilePicture: 'src/assets/images/JackDavis.png',
+    profilePicture: '/images/jack-davis.png',
   },
   {
     id: 9,
     name: 'Michael Rodriguez',
-    profilePicture: 'src/assets/images/MichaelRodriguez.png',
+    profilePicture: '/images/michael-rodriguez.png',
   },
   {
     id: 10,
     name: 'Lucas Jones',
-    profilePicture: 'src/assets/images/LucasJones.png',
+    profilePicture: '/images/lucas-jones.png',
   },
   {
     id: 11,
     name: 'Olivia Martinez',
-    profilePicture: 'src/assets/images/OliviaMartinez.png',
+    profilePicture: '/images/olivia-martinez.png',
   },
   {
     id: 12,
     name: 'Ava Lopez',
-    profilePicture: 'src/assets/images/AvaLopez.png',
+    profilePicture: '/images/ava-lopez.png',
   },
   {
     id: 13,
     name: 'Amelia Wilson',
-    profilePicture: 'src/assets/images/AmeliaWilson.png',
+    profilePicture: '/images/amelia-wilson.png',
   },
   {
     id: 14,
     name: 'Emma Anderson',
-    profilePicture: 'src/assets/images/EmmaAnderson.png',
+    profilePicture: '/images/emma-anderson.png',
   },
   {
     id: 15,
     name: 'Mia Thomas',
-    profilePicture: 'src/assets/images/MiaThomas.png',
+    profilePicture: '/images/mia-thomas.png',
   },
   {
     id: 16,
     name: 'Sophia Taylor',
-    profilePicture: 'src/assets/images/SophiaTaylor.png',
+    profilePicture: '/images/sophia-taylor.png',
   },
   {
     id: 17,
     name: 'Jessica Garcia',
-    profilePicture: 'src/assets/images/JessicaGarcia.png',
+    profilePicture: '/images/jessica-garcia.png',
   },
   {
     id: 18,
     name: 'Luna Moore',
-    profilePicture: 'src/assets/images/LunaMoore.png',
+    profilePicture: '/images/luna-moore.png',
   },
   {
     id: 19,
     name: 'Isabella Jackson',
-    profilePicture: 'src/assets/images/IsabellaJackson.png',
+    profilePicture: '/images/isabella-jackson.png',
   },
   {
     id: 20,
     name: 'Lauren Martin',
-    profilePicture: 'src/assets/images/LaurenMartin.png',
+    profilePicture: '/images/lauren-martin.png',
   },
 ]
 
@@ -140,7 +140,7 @@ export const navigation = [
 ]
 
 export const senderInformations = {
-  image: './src/assets/images/james-williams.png',
+  image: '/images/james-williams.png',
   name: 'James Williams',
 }
 
@@ -165,7 +165,7 @@ export const balance = [
 
 export const transactions = [
   {
-    receiverImage: './src/assets/images/william-garcia.png',
+    receiverImage: '/images/william-garcia.png',
     receiverName: 'William Garcia',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -175,7 +175,7 @@ export const transactions = [
     message: 'Hi William!\n\nThank you for being an amazing friend.',
   },
   {
-    receiverImage: 'src/assets/images/oliver-jones.png',
+    receiverImage: '/images/oliver-jones.png',
     receiverName: 'Oliver Jones',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -185,7 +185,7 @@ export const transactions = [
     message: 'Hi Oliver!\n\nCongrats on winning the bet.',
   },
   {
-    receiverImage: 'src/assets/images/spotify.png',
+    receiverImage: '/images/spotify.png',
     receiverName: 'Spotify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -195,7 +195,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/adobe-photoshop.png',
+    receiverImage: '/images/adobe-photoshop.png',
     receiverName: 'Adobe Photoshop',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -205,7 +205,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/loom.png',
+    receiverImage: '/images/loom.png',
     receiverName: 'Loom',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -215,7 +215,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/dribbble.png',
+    receiverImage: '/images/dribbble.png',
     receiverName: 'Dribbble',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -225,7 +225,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/shopify.png',
+    receiverImage: '/images/shopify.png',
     receiverName: 'Shopify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -235,7 +235,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/mailchimp.png',
+    receiverImage: '/images/mailchimp.png',
     receiverName: 'Mailchimp',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -245,7 +245,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/jessica-garcia.png',
+    receiverImage: '/images/jessica-garcia.png',
     receiverName: 'Jessica Garcia',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -255,7 +255,7 @@ export const transactions = [
     message: 'Hi Jessica!\n\nIYKYK.',
   },
   {
-    receiverImage: 'src/assets/images/lucas-jones.png',
+    receiverImage: '/images/lucas-jones.png',
     receiverName: 'Lucas Jones',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -266,7 +266,7 @@ export const transactions = [
       'Hi Lucas!\n\nHere is a little help during this tough time. Stay strong!',
   },
   {
-    receiverImage: 'src/assets/images/mia-thomas.png',
+    receiverImage: '/images/mia-thomas.png',
     receiverName: 'Mia Thomas',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -277,7 +277,7 @@ export const transactions = [
       'Hi Mia!\n\nJust want to say thank you for being an incredible friend.',
   },
   {
-    receiverImage: 'src/assets/images/benjamin-miller.png',
+    receiverImage: '/images/benjamin-miller.png',
     receiverName: 'Benjamin Miller',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -287,7 +287,7 @@ export const transactions = [
     message: 'Hi Benjamin.\n\nAs always...',
   },
   {
-    receiverImage: 'src/assets/images/henry-johnson.png',
+    receiverImage: '/images/henry-johnson.png',
     receiverName: 'Henry Johnson',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -298,7 +298,7 @@ export const transactions = [
       'Hi Henry! \n\nMaking your house a home. Here is help for repairs.',
   },
   {
-    receiverImage: 'src/assets/images/spotify.png',
+    receiverImage: '/images/spotify.png',
     receiverName: 'Spotify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -308,7 +308,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/noah-williams.png',
+    receiverImage: '/images/noah-williams.png',
     receiverName: 'Noah Williams',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -318,7 +318,7 @@ export const transactions = [
     message: 'Hi Noah!\n\nThank you for always being there for me',
   },
   {
-    receiverImage: 'src/assets/images/adobe-photoshop.png',
+    receiverImage: '/images/adobe-photoshop.png',
     receiverName: 'Adobe Photoshop',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -328,7 +328,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/loom.png',
+    receiverImage: '/images/loom.png',
     receiverName: 'Loom',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -338,7 +338,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/shopify.png',
+    receiverImage: '/images/shopify.png',
     receiverName: 'Shopify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -348,7 +348,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/lucas-jones.png',
+    receiverImage: '/images/lucas-jones.png',
     receiverName: 'Lucas Jones',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -358,7 +358,7 @@ export const transactions = [
     message: 'Hi Lucas!\n\nCongrats on winning the bet again.',
   },
   {
-    receiverImage: 'src/assets/images/benjamin-miller.png',
+    receiverImage: '/images/benjamin-miller.png',
     receiverName: 'Benjamin Miller',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -368,7 +368,7 @@ export const transactions = [
     message: 'Hi Benjamin.\n\nAs always...',
   },
   {
-    receiverImage: 'src/assets/images/henry-johnson.png',
+    receiverImage: '/images/henry-johnson.png',
     receiverName: 'Henry Johnson',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -379,7 +379,7 @@ export const transactions = [
       'Hi Henry!\n\nSmooth move! Here is a little help for your new start.',
   },
   {
-    receiverImage: 'src/assets/images/spotify.png',
+    receiverImage: '/images/spotify.png',
     receiverName: 'Spotify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -389,7 +389,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/adobe-photoshop.png',
+    receiverImage: '/images/adobe-photoshop.png',
     receiverName: 'Adobe Photoshop',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -399,7 +399,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/loom.png',
+    receiverImage: '/images/loom.png',
     receiverName: 'Loom',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -409,7 +409,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/spotify.png',
+    receiverImage: '/images/spotify.png',
     receiverName: 'Spotify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -419,7 +419,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/shopify.png',
+    receiverImage: '/images/shopify.png',
     receiverName: 'Shopify',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -429,7 +429,7 @@ export const transactions = [
     message: '',
   },
   {
-    receiverImage: 'src/assets/images/lucas-jones.png',
+    receiverImage: '/images/lucas-jones.png',
     receiverName: 'Lucas Jones',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -439,7 +439,7 @@ export const transactions = [
     message: 'Hi Lucas!\n\nCongrats on winning the bet.',
   },
   {
-    receiverImage: 'src/assets/images/benjamin-miller.png',
+    receiverImage: '/images/benjamin-miller.png',
     receiverName: 'Benjamin Miller',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,
@@ -449,7 +449,7 @@ export const transactions = [
     message: 'Hi Benjamin.\n\nAs always...',
   },
   {
-    receiverImage: 'src/assets/images/henry-johnson.png',
+    receiverImage: '/images/henry-johnson.png',
     receiverName: 'Henry Johnson',
     senderImage: senderInformations.image,
     senderName: senderInformations.name,

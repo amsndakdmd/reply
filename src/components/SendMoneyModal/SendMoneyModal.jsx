@@ -75,7 +75,7 @@ export default function SendMoneyModal({ closeModal }) {
                 setFormFields({
                   ...formFields,
                   receiverName: e.target.value,
-                  receiverImage: `src/assets/images/${e.target.value
+                  receiverImage: `/images/${e.target.value
                     .split(' ')
                     .join('-')
                     .toLowerCase()}.png`,

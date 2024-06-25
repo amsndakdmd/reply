@@ -27,8 +27,7 @@ export default function TransactionDetails({ closeDialog }) {
                 alt={`Image of ${transactionDetail.senderImage}`}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null
-                  currentTarget.src =
-                    'src/assets/images/defaultProfilePicture.png'
+                  currentTarget.src = '/images/default-profile-picture.png'
                 }}
               />
             </div>
@@ -52,8 +51,7 @@ export default function TransactionDetails({ closeDialog }) {
                 alt={''}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null
-                  currentTarget.src =
-                    'src/assets/images/DefaultProfilePicture.png'
+                  currentTarget.src = '/images/default-profile-picture.png'
                 }}
               />
             </div>

@@ -43,7 +43,7 @@ export default function Table({ transactions }) {
                       onError={({ currentTarget }) => {
                         currentTarget.onerror = null
                         currentTarget.src =
-                          'src/assets/images/defaultProfilePicture.png'
+                          '/images/default-profile-picture.png'
                       }}
                     />
                     {transaction.receiverName}
