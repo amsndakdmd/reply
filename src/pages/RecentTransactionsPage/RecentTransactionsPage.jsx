@@ -4,6 +4,7 @@ import { useTransactions } from '../../utils/contexts/TransactionsContext'
 
 export default function RecentTransactionsPage() {
   const { transactions } = useTransactions()
+  
   return (
     <main>
       <Container>

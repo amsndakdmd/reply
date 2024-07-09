@@ -1,5 +1,5 @@
 import styles from './dialog.module.css'
-import { forwardRef, useEffect } from 'react'
+import { forwardRef } from 'react'
 
 export default forwardRef(function Dialog({ children }, dialogRef) {
   return (

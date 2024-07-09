@@ -92,7 +92,6 @@ export default function BalanceSection() {
               style: 'currency',
               currency: 'USD',
               notation: 'compact',
-              maximumFractionDigits: 1,
             })
           },
         },
