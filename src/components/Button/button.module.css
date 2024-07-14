@@ -1,6 +1,6 @@
 .base {
   display: inline-flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   gap: var(--space-sm);
   font-size: var(--paragraph);
