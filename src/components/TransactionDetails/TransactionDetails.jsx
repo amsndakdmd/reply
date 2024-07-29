@@ -69,7 +69,6 @@ export default function TransactionDetails({ closeDialog }) {
             </div>
           </div>
         </div>
-
         <div>
           <p>Message</p>
           <textarea
